@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_contacts"
+            android:title="Dashboard Log" />
+        <item
+            android:id="@+id/nav_prospectus"
+            android:icon="@drawable/ic_recent_actors"
+            android:title="Prospectos" />
+
+
+    </group>
+
+    <item android:title="Control sesión">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app"
+                android:title="Cerrar sesión" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_observation_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="co.devpenguin.directotest.ProspectusFormActivity">
+
+    <ScrollView android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Nombre"/>
+
+            <TextView android:id="@+id/tv_validations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Apellido"/>
+
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_schProspectIdentification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:enabled="false"
+                android:editable="false"
+                android:inputType="textCapSentences"
+                android:hint="Identificación"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Estado:"/>
+
+            <Spinner
+                android:id="@+id/sp_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:entries="@array/status"></Spinner>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="phone"
+                android:hint="Teléfono"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Dirección"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_zoneCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Código de zona"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_neighborhoodCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Código de Barrio"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_cityCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Código de Ciudad"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_sectionCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Código de Sección"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_roleId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="number"
+                android:hint="Código de Rol"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_appointableId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Id Asignado"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_rejectedObservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Observación de rechazo"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_observation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textCapSentences"
+                android:hint="Observación "/>
+
+            <CheckBox android:id="@+id/cb_disable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deshabilitado"/>
+
+            <CheckBox android:id="@+id/cb_visited"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitado"/>
+
+            <CheckBox android:id="@+id/cb_callcenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Callcenter"/>
+
+            <CheckBox android:id="@+id/cb_acceptSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acepta Búsqueda"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_campaignCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="number"
+                android:hint="Observación "/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ed_userId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="number"
+                android:hint="Id Usuario "/>
+
+
+
+            <Button android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:text="Guardar"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
